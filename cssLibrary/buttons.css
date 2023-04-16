@@ -1,0 +1,124 @@
+/*==========================
+    Buttons 
+==========================*/
+/* Large Blue Button */
+.btn-large-blue {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-large-blue:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+  color: #fff;
+}
+
+.btn-large-blue:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-large-blue:active {
+  background-color: #0062cc;
+  border-color: #005cbf;
+  color: #fff;
+}
+
+/* Large Green Button */
+.btn-large-green {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #28a745;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-large-green:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+  color: #fff;
+}
+
+.btn-large-green:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.btn-large-green:active {
+    background-color: #1e7e34;
+    border-color: #1c7430;
+    color: #fff;
+  }
+
+/* Large Red Button */
+.btn-large-red {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #dc3545;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-large-red:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+  color: #fff;
+}
+
+.btn-large-red:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.btn-large-red:active {
+  background-color: #bd2130;
+  border-color: #b21f2d;
+  color: #fff;
+}
+
+/* Small Yellow Button */
+.btn-small-yellow {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #ffc107;
+  color: #212529;
+  border: 1px;
+}
+
+.btngroup {
+  display: flex;
+  flex-direction: column;
+}

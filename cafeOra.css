@@ -1,0 +1,803 @@
+/* ========================
+    Table of Contents:
+     -Color Root Variables
+     -Responsive Design
+     -Layout
+     -Accessibility
+     -Source Ordering
+     -Typography
+     -Forms
+     -Buttons
+     -Navigation
+======================= */
+
+/* 
+  This CSS library can be easily customized and extended to fit the needs of a particular project, while still ensuring that the site is accessible to all users. By using this CSS library, our developers can easily modify content in a flexible and responsive way without having to manually re-write the HTML markup.
+*/
+
+/* Reset CSS */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*==========================
+    Color Root Variables
+==========================*/
+:root {
+  --midnight-blue: #41729F;
+  --blue-gray: #5585AF;
+  --dark-blue: #274472;
+  --baby-blue: #C3E0E5;
+  --light: #ffffff;
+  --dark: #000000;
+  --gray: #d6d6d6;
+  --blue-green: #75E6DA;
+}
+
+/*==========================
+      Responsive Design 
+==========================*/
+
+/* Grid System */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col {
+  padding: 0 15px;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 576px) {
+.col-sm {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+}
+
+@media (min-width: 768px) {
+.col-md {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+}
+
+@media (min-width: 992px) {
+.col-lg {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+}
+
+@media (min-width: 1200px) {
+.col-xl {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+}
+
+/* Responsive Typography */
+h1 {
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+h1 {
+  font-size: 24px;
+}
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+p {
+  font-size: 14px;
+}
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+}
+
+/*==========================
+    Layout 
+==========================*/
+
+/* Box Sizing */
+
+* {
+  box-sizing: border-box;
+}
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Flexbox */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+/* Floats */
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Margins and Padding */
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}
+
+.mr-1 {
+  margin-right: 10px;
+}
+
+.mr-2 {
+  margin-right: 20px;
+}
+
+.mr-3 {
+  margin-right: 30px;
+}
+
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+.mb-3 {
+  margin-bottom: 30px;
+}
+
+.ml-1 {
+  margin-left: 10px;
+}
+
+.ml-2 {
+  margin-left: 20px;
+}
+
+.ml-3 {
+  margin-left: 30px;
+}
+
+.pt-1 {
+  padding-top: 10px;
+}
+
+.pt-2 {
+  padding-top: 20px;
+}
+
+.pt-3 {
+  padding-top: 30px;
+}
+
+.pr-1 {
+  padding-right: 10px;
+}
+
+.pr-2 {
+  padding-right: 20px;
+}
+
+.pr-3 {
+  padding-right: 30px;
+}
+
+.pb-1 {
+  padding-bottom: 10px;
+}
+
+.pb-2 {
+  padding-bottom: 20px;
+}
+
+.pb-3 {
+  padding-bottom: 30px;
+}
+
+.pl-1 {
+  padding-left: 10px;
+}
+
+.pl-2 {
+  padding-left: 20px;
+}
+
+.pl-3 {
+  padding-left: 30px;
+}
+
+/* Centering */
+.text-center {
+  text-align: center;
+}
+
+.v-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*==========================
+    Accessibility 
+==========================*/
+
+/* High Contrast */
+.high-contrast {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+/* Text Zoom */
+.text-zoom {
+  font-size: 1.2em;
+}
+
+/* Focus */
+:focus {
+  outline: 3px solid #0F52BA;
+}
+
+/* Skip Links */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Large Text */
+.large-text {
+  font-size: 1.5em;
+}
+
+/* Background and Text Contrast */
+.contrast {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Links Underline */
+a {
+  text-decoration: underline;
+}
+
+/* Hover and Active Link Color */
+a:hover, a:active {
+  color: #0F52BA;
+}
+
+/*==========================
+    Source Ordering 
+==========================*/
+
+/* Default order */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+/* Source Ordering */
+.order-first {
+  order: -1;
+}
+
+.order-last {
+  order: 99;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+/* Responsive Source Ordering */
+@media screen and (max-width: 768px) {
+.col-sm-order-first {
+  order: -1;
+}
+
+.col-sm-order-last {
+  order: 99;
+}
+
+.col-sm-order-1 {
+  order: 1;
+}
+
+.col-sm-order-2 {
+  order: 2;
+}
+
+.col-sm-order-3 {
+  order: 3;
+}
+}
+
+/*==========================
+    Typography 
+==========================*/
+
+/* Font Families */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Font Sizes */
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Text Alignments */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Font Weights */
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+/* Text Transformations */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+/* Line Heights */
+.line-height-normal {
+  line-height: 1.5;
+}
+
+.line-height-compact {
+  line-height: 1.2;
+}
+
+/*==========================
+    Forms 
+==========================*/
+/* Form Wrapper */
+.form-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Form Buttons */
+.form-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.form-button:hover {
+  background-color: #0069d9;
+}
+
+.form-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-button:active {
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+/*==========================
+    Buttons 
+==========================*/
+/* Large Blue Button */
+.btn-large-blue {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-large-blue:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+  color: #fff;
+}
+
+.btn-large-blue:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-large-blue:active {
+  background-color: #0062cc;
+  border-color: #005cbf;
+  color: #fff;
+}
+
+/* Large Green Button */
+.btn-large-green {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #28a745;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-large-green:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+  color: #fff;
+}
+
+.btn-large-green:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.btn-large-green:active {
+    background-color: #1e7e34;
+    border-color: #1c7430;
+    color: #fff;
+  }
+
+/* Large Red Button */
+.btn-large-red {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #dc3545;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-large-red:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+  color: #fff;
+}
+
+.btn-large-red:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.btn-large-red:active {
+  background-color: #bd2130;
+  border-color: #b21f2d;
+  color: #fff;
+}
+
+/* Small Yellow Button */
+.btn-small-yellow {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #ffc107;
+  color: #212529;
+  border: 1px;
+}
+
+.btngroup {
+  display: flex;
+  flex-direction: column;
+}
+
+/*==========================
+    Navigation 
+==========================*/
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+/* Navigation Links */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #6f42c1;
+}
+
+/* Navigation Logo */
+.navbar-logo {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.navbar-logo img {
+  height: 100%;
+}
+
+/* Navigation Button */
+.navbar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6f42c1;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-button:hover {
+  background-color: #5a32a3;
+}
+
+.navbar-button:active {
+  background-color: #482880;
+}

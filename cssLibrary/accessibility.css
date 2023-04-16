@@ -1,0 +1,66 @@
+/*==========================
+    Accessibility 
+==========================*/
+
+/* High Contrast */
+.high-contrast {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+/* Text Zoom */
+.text-zoom {
+  font-size: 1.2em;
+}
+
+/* Focus */
+:focus {
+  outline: 3px solid #0F52BA;
+}
+
+/* Skip Links */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Large Text */
+.large-text {
+  font-size: 1.5em;
+}
+
+/* Background and Text Contrast */
+.contrast {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Links Underline */
+a {
+  text-decoration: underline;
+}
+
+/* Hover and Active Link Color */
+a:hover, a:active {
+  color: #0F52BA;
+}

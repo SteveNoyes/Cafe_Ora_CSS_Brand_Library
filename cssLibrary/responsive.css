@@ -1,0 +1,85 @@
+/*==========================
+      Responsive Design 
+==========================*/
+
+/* Grid System */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col {
+  padding: 0 15px;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 576px) {
+.col-sm {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+}
+
+@media (min-width: 768px) {
+.col-md {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+}
+
+@media (min-width: 992px) {
+.col-lg {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+}
+
+@media (min-width: 1200px) {
+.col-xl {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+}
+
+/* Responsive Typography */
+h1 {
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+h1 {
+  font-size: 24px;
+}
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+p {
+  font-size: 14px;
+}
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+}

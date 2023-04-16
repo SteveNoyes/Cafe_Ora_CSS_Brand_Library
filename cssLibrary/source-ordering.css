@@ -1,0 +1,59 @@
+/*==========================
+    Source Ordering 
+==========================*/
+
+/* Default order */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+/* Source Ordering */
+.order-first {
+  order: -1;
+}
+
+.order-last {
+  order: 99;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+/* Responsive Source Ordering */
+@media screen and (max-width: 768px) {
+.col-sm-order-first {
+  order: -1;
+}
+
+.col-sm-order-last {
+  order: 99;
+}
+
+.col-sm-order-1 {
+  order: 1;
+}
+
+.col-sm-order-2 {
+  order: 2;
+}
+
+.col-sm-order-3 {
+  order: 3;
+}
+}
